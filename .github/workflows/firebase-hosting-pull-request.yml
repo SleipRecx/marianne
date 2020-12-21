@@ -15,5 +15,3 @@ jobs:
           projectId: marianne-9fd8c
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
-      - run: npm install
-      - run: npm run build --if-present
