@@ -40,11 +40,15 @@ function sketch (p) {
   const RIDGE_ZOOM = 0.005;
 
   const SNOWFLAKES = [];
+  
+  let sunPos = -30
+
 
   p.setup = () => {
     p.createCanvas(1080, 1350);
     p.fill(SNOW_COLOR);
     p.noStroke();
+    //p.colorMode(p.HSB, 255);
     // Initialize the snowflakes with random positions
     for (let l = 0; l < LAYER_COUNT; l++) {
       SNOWFLAKES.push([]);
@@ -60,8 +64,10 @@ function sketch (p) {
   }
 
   p.draw = () => {
+
     p.background(SKY_COLOR);
-    const skyHeight = p.round(p.height * SKY_SPACE);
+
+    let skyHeight = p.round(p.height * SKY_SPACE);
     for (let i = 1; i < LAYER_COUNT; i++) {
       drawRidge(
         i,
@@ -73,8 +79,7 @@ function sketch (p) {
         SKY_LAYER_OFFSET
       );
     }
-
-    drawSun(p.width / 2, skyHeight - RIDGE_AMP / 2);
+    drawSun(p.width / 2, sunPos);
 
       // Iterate through the layers of snowflakes
     for (let l = 0; l < SNOWFLAKES.length; l++) {
@@ -92,12 +97,25 @@ function sketch (p) {
         0
       );
 
+      
+
       // Draw each snowflake
       for (let i = 0; i < SNOWLAYER.length; i++) {
         const snowflake = SNOWLAYER[i];
         p.circle(snowflake.x, snowflake.y, (snowflake.l * MAX_SIZE) / LAYER_COUNT);
         updateSnowflake(snowflake);
       }
+
+    }
+
+    p.mouseWheel = e => {
+      sunPos += e.delta;
+      if (sunPos < -30) {
+        sunPos = -30
+      } else if (sunPos > 680) {
+        sunPos = 680
+      }
+
     }
 
       // Compute and draw a ridge
