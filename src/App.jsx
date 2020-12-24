@@ -65,7 +65,7 @@ function sketch (p) {
     let text = "God jul Marianne! Min gave til deg er denne flotte siden, pluss en smaksopplevelse på restauranten Omakase i Oslo."
     let link = p.createA("https://www.omakaseoslo.no/", text, "_blank"); 
 
-    link.position(20, p.height-250);
+    link.position(20, p.height-150);
   }
 
   p.draw = () => {
@@ -114,14 +114,12 @@ function sketch (p) {
     }
 
     p.mouseWheel = e => {
-    
       sunPos += e.delta;
       if (sunPos < -30) {
         sunPos = -30
       } else if (sunPos > 680) {
         sunPos = 680
       }
-
     }
 
       // Compute and draw a ridge
