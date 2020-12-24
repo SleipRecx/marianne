@@ -45,7 +45,7 @@ function sketch (p) {
 
 
   p.setup = () => {
-    p.createCanvas(375, 812);
+    p.createCanvas(450, 800);
     p.fill(SNOW_COLOR);
     p.noStroke();
     //p.colorMode(p.HSB, 255);

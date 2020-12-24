@@ -1,6 +1,8 @@
 body {
-  min-width: 375px;
-  min-height: 812px;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 a {
