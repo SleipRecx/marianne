@@ -15,13 +15,13 @@ function App() {
 
 function sketch (p) {
   const SNOW_COLOR = "snow";
-  const SNOWFLAKES_PER_LAYER = 200;
+  const SNOWFLAKES_PER_LAYER = 100;
   const MAX_SIZE = 10;
   const GRAVITY = 0.5;
   const LAYER_COUNT = 4;
 
   const SKY_COLOR = "skyblue";
-  const SKY_SPACE = 0.4;
+  const SKY_SPACE = 0.5;
   const SKY_AMP = 150;
   const SKY_ZOOM = 0.0025;
   const SKY_LAYER_OFFSET = 3;
@@ -31,7 +31,7 @@ function sketch (p) {
 
   const SUN_COLOR = "#FFF2AD";
   const SUN_GLOW = 100;
-  const SUN_RADIUS = 150;
+  const SUN_RADIUS = 100;
 
   const RIDGE_TOP_COLOR = "#BCCEDD";
   const RIDGE_BOT_COLOR = "#7E9CB9";
@@ -45,7 +45,7 @@ function sketch (p) {
 
 
   p.setup = () => {
-    p.createCanvas(808, 1012);
+    p.createCanvas(375, 812);
     p.fill(SNOW_COLOR);
     p.noStroke();
     //p.colorMode(p.HSB, 255);
@@ -62,10 +62,10 @@ function sketch (p) {
       }
     }
 
+    let text = "Min gave til deg er denne flotte siden pluss en smaksopplevelse på omakaseoslo.no. God jul :)"
+    let link = p.createA("https://www.omakaseoslo.no/", text, "_blank"); 
 
-    let link = p.createA("https://www.omakaseoslo.no/", "omakaseoslo.no", "_blank"); 
-
-    link.position(20, p.height-150);
+    link.position(20, p.height-200);
   }
 
   p.draw = () => {
@@ -165,16 +165,6 @@ function sketch (p) {
       else if (snowflake.x < -diameter) snowflake.x = p.width + diameter;
       else snowflake.x += wind * WIND_SPEED * snowflake.l;
     }
-
-    let s = 'Min julegave til deg er denne flotte siden + middag på Omakase i Oslo. God jul :)';
-    p.textSize(32)
-    p.fill(50);
-    p.text(s, 200, p.height / 2, 400); 
-
-
-  
-    
-
   
   };
 }

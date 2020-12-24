@@ -1,13 +1,14 @@
-
-.App-header {
-  background-color: #282c34;
-  color: white;
+body {
+  min-width: 375px;
+  min-height: 812px;
 }
 
 a {
   color: white;
   font-size: 32px;
   text-decoration: none;
+  word-wrap:break-word;
+  width: 300px;
 }
 
 a:visited{
