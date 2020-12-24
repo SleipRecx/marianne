@@ -21,7 +21,7 @@ function sketch (p) {
   const LAYER_COUNT = 4;
 
   const SKY_COLOR = "skyblue";
-  const SKY_SPACE = 0.5;
+  const SKY_SPACE = 0.55;
   const SKY_AMP = 150;
   const SKY_ZOOM = 0.0025;
   const SKY_LAYER_OFFSET = 3;
