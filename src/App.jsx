@@ -15,7 +15,7 @@ function App() {
 
 function sketch (p) {
   const SNOW_COLOR = "snow";
-  const SNOWFLAKES_PER_LAYER = 100;
+  const SNOWFLAKES_PER_LAYER = 150;
   const MAX_SIZE = 10;
   const GRAVITY = 0.5;
   const LAYER_COUNT = 4;
@@ -62,10 +62,10 @@ function sketch (p) {
       }
     }
 
-    let text = "Min gave til deg er denne flotte siden pluss en smaksopplevelse på omakaseoslo.no. God jul :)"
+    let text = "God jul Marianne! Min gave til deg er denne flotte siden, pluss en smaksopplevelse på restauranten Omakase i Oslo."
     let link = p.createA("https://www.omakaseoslo.no/", text, "_blank"); 
 
-    link.position(20, p.height-200);
+    link.position(20, p.height-250);
   }
 
   p.draw = () => {
@@ -114,6 +114,7 @@ function sketch (p) {
     }
 
     p.mouseWheel = e => {
+    
       sunPos += e.delta;
       if (sunPos < -30) {
         sunPos = -30
