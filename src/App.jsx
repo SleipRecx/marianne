@@ -41,11 +41,11 @@ function sketch (p) {
 
   const SNOWFLAKES = [];
   
-  let sunPos = -30
+  let sunPos = 250
 
 
   p.setup = () => {
-    p.createCanvas(1080, 1350);
+    p.createCanvas(808, 1012);
     p.fill(SNOW_COLOR);
     p.noStroke();
     //p.colorMode(p.HSB, 255);
@@ -61,6 +61,11 @@ function sketch (p) {
         });
       }
     }
+
+
+    let link = p.createA("https://www.omakaseoslo.no/", "omakaseoslo.no", "_blank"); 
+
+    link.position(20, p.height-150);
   }
 
   p.draw = () => {
@@ -160,6 +165,15 @@ function sketch (p) {
       else if (snowflake.x < -diameter) snowflake.x = p.width + diameter;
       else snowflake.x += wind * WIND_SPEED * snowflake.l;
     }
+
+    let s = 'Min julegave til deg er denne flotte siden + middag på Omakase i Oslo. God jul :)';
+    p.textSize(32)
+    p.fill(50);
+    p.text(s, 200, p.height / 2, 400); 
+
+
+  
+    
 
   
   };
