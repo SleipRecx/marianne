@@ -65,7 +65,7 @@ function sketch (p) {
     let text = "God jul Marianne! Min gave til deg er denne flotte siden, pluss en smaksopplevelse på restauranten Omakase i Oslo."
     let link = p.createA("https://www.omakaseoslo.no/", text, "_blank"); 
 
-    link.position(20, p.height-110);
+    link.position(20, p.height-200);
   }
 
   p.draw = () => {
