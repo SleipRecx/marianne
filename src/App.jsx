@@ -45,7 +45,7 @@ function sketch (p) {
 
 
   p.setup = () => {
-    p.createCanvas(450, 800);
+    p.createCanvas(450, 700);
     p.fill(SNOW_COLOR);
     p.noStroke();
     //p.colorMode(p.HSB, 255);
@@ -65,7 +65,7 @@ function sketch (p) {
     let text = "God jul Marianne! Min gave til deg er denne flotte siden, pluss en smaksopplevelse på restauranten Omakase i Oslo."
     let link = p.createA("https://www.omakaseoslo.no/", text, "_blank"); 
 
-    link.position(20, p.height-150);
+    link.position(20, p.height-70);
   }
 
   p.draw = () => {
