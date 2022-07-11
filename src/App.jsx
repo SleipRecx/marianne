@@ -11,9 +11,11 @@ function App() {
 
        <P5Wrapper sketch={sketch} />
 
-       
+
       </header>
     </div>
+
+    
   );
 }
 
