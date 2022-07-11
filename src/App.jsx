@@ -7,10 +7,11 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <header className="App-header">
 
        <P5Wrapper sketch={sketch} />
+       
       </header>
     </div>
   );
